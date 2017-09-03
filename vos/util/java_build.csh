@@ -5,7 +5,13 @@
 # system.  If csh is ever fixed (as it is on Linux), change this back to csh.
 #
 # This script builds the contents of the java directory.
-#  
+#
+
+
+# Prep build output directory
+rm -rf $V2JAVA
+mkdir $V2JAVA
+cp -rf $V2JAVASOURCE/jpl $V2JAVA
 
 # For compilation only, we want CLASSPATH to point at the source
 
@@ -82,6 +88,7 @@ echo "*********************************************"
 echo "**** CODE GENERATION PHASE OF JAVA BUILD ****"
 echo "*********************************************"
 
+# Begin building
 cd $V2JAVA
 foreach tld (jpl com gov one the)
   find $tld -name test -prune -o -type d -exec $V2UTIL/java_build_dir.csh {} generate \;

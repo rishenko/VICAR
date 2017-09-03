@@ -640,7 +640,8 @@ unsetenv FEI
 @endif
 
 @ifdef SS_JAVA
-setenv	V2JAVA		$V2TOP/java
+setenv	V2JAVA		$V2TOP/java/build
+setenv	V2JAVASOURCE		$V2TOP/java
 setenv	V2HTML		$V2TOP/html
 setenv  V2DOCSOURCE     $V2TOP/docsource
 @else

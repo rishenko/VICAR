@@ -1,6 +1,3 @@
-# git
-.gitignore.swp
-
 # external binaries for building VICAR
 vos/external
 
@@ -17,6 +14,7 @@ vos/vicset1.csh
 # java build output
 vos/html
 vos/java/**/*.class
+vos/java/build
 vos/build_java
 
 # environment based documentation and libs
