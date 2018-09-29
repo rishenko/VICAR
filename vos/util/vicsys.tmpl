@@ -259,7 +259,7 @@ LDFLAGS =
 #endif
 
 #if HP700_ARCH				/* HP put includes in a weird place */
-X11INC	= -I/usr/include/X11
+X11INC	= -I/usr/include/X11R6
 #else
 #if SUN_SOLARIS_ARCH
 X11INC  = -I/usr/openwin/include
@@ -271,7 +271,7 @@ X11INC  = -I/usr/dt/include -I/usr/openwin/include
 X11INC  = -I/usr/X11R5/include
 #else
 #if ANY_LINUX_ARCH
-X11INC  = -I/usr/X11/include
+X11INC  = -I/usr/X11R6/include
 #else
 #if ANY_OSX_ARCH
 X11INC  = -I/usr/X11/include -I//usr/local/Cellar/openmotif/2.3.8/include
@@ -285,7 +285,7 @@ X11INC	=
 #endif
 
 #if HP700_ARCH
-X11LIB	= -L/usr/lib/X11 -L/usr/lib/Motif1.2_R6 -lXm -lXt -lX11
+X11LIB	= -L/usr/lib/X11R6 -L/usr/lib/Motif1.2_R6 -lXm -lXt -lX11
 #else
 #if SGI_ARCH
 X11LIB  = -lXm -lXt -lX11 -lsun
@@ -300,7 +300,7 @@ X11LIB	= -L/usr/dt/lib -L/usr/openwin/lib -lXm -lXt -lX11 -lgen
 X11LIB  = -L/usr/dt/lib -L/usr/openwin/lib -lXm -lXt -lX11 -lgen
 #else
 #if ANY_LINUX_ARCH
-X11LIB = -L/usr/X11/lib -lXm -lXp -lXext -lXt -lX11
+X11LIB = -L/usr/X11R6/lib -lXm -lXp -lXext -lXt -lX11
 #else
 #if ANY_OSX_ARCH
 X11LIB = -L/usr/X11/lib -L//usr/local/Cellar/openmotif/2.3.8/lib -lXm -lXp -lXext -lXt -lX11 -force_flat_namespace
