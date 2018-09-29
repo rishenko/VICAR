@@ -231,7 +231,7 @@ if ($?LD_LIBRARY_PATH != 0) then
       endif
    endif
    if ($VICCPU == 'mac-osx' || $VICCPU == 'x86-macosx') then
-      setenv LD_LIBRARY_PATH `$V2TOP/util/remove_element.csh "$LD_LIBRARY_PATH" /usr/OpenMotif/lib`
+      setenv LD_LIBRARY_PATH `$V2TOP/util/remove_element.csh "$LD_LIBRARY_PATH" /usr/local/Cellar/openmotif/2.3.8/lib`
    endif
 else
    setenv LD_LIBRARY_PATH
@@ -3152,7 +3152,7 @@ endif
       setenv LD_LIBRARY_PATH /usr/lib:/lib:${LD_LIBRARY_PATH}
    endif
    if ($VICCPU == 'mac-osx' || $VICCPU == 'x86-macosx') then
-      setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/usr/OpenMotif/lib
+      setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/usr/local/Cellar/openmotif/2.3.8/lib
    endif
 @ifdef SS_JAVA
    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${V2HTML}/lib/${VICCPU}
