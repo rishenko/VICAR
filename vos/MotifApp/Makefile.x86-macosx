@@ -2,8 +2,8 @@
 
 CC = g++ -m32 -Wno-invalid-offsetof
 DEBUG = -g
-CCFLAGS = $(DEBUG) -DFUNCPROTO -DXTFUNCPROTO -I../MotifApp -I/usr/X11R6/include -I/usr/OpenMotif/include
-LIBS = -L/usr/X11R6/lib -L/usr/OpenMotif/lib -lXm -lXt -lXext -lX11
+CCFLAGS = $(DEBUG) -DFUNCPROTO -DXTFUNCPROTO -I../MotifApp -I/usr/X11/include -I/usr/local/Cellar/openmotif/2.3.8/include
+LIBS = -L/usr/X11/lib -L/usr/local/Cellar/openmotif/2.3.8/lib -lXm -lXt -lXext -lX11
 
 .cc.o:
 	$(CC) $(CCFLAGS) -c $*.cc
